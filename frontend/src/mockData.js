@@ -40,6 +40,7 @@ export const cduPeriods = [
 
 // Calculate years lived under CDU government
 export const calculateCDUYears = (birthYear) => {
+  // Current date is October 9, 2025
   const currentYear = 2025;
   
   if (birthYear > currentYear) {
