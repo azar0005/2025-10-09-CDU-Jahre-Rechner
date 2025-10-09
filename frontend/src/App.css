@@ -1,34 +1,45 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Smooth transitions for interactive elements */
+button {
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+button:active {
+    transform: scale(0.98);
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+input {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+/* Smooth animations */
+@keyframes fade-in {
     from {
-        transform: rotate(0deg);
+        opacity: 0;
     }
     to {
-        transform: rotate(360deg);
+        opacity: 1;
     }
+}
+
+@keyframes slide-in-from-bottom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-in {
+    animation: fade-in 0.3s ease-out;
+}
+
+.fade-in {
+    animation: fade-in 0.3s ease-out;
+}
+
+.slide-in-from-bottom-4 {
+    animation: slide-in-from-bottom 0.5s ease-out;
 }
