@@ -26,6 +26,15 @@ export const cduPeriods = [
     chancellors: ['Angela Merkel (2005-2021)'],
     coalition: 'Grand Coalition (CDU/CSU-SPD) and CDU/CSU-FDP (2009-2013)',
     description: 'Financial crisis management and refugee policy'
+  },
+  {
+    id: 4,
+    startYear: 2025,
+    endYear: 2025,
+    duration: 1,
+    chancellors: ['Friedrich Merz (2025-present)'],
+    coalition: 'Grand Coalition (CDU/CSU-SPD)',
+    description: 'New CDU government following the end of the Ampel coalition'
   }
 ];
 
