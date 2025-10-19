@@ -19,7 +19,7 @@ const Timeline = ({ periods, birthYear, partyName = "CDU" }) => {
     <Card className="border-0 shadow-xl bg-white/80 backdrop-blur-sm">
       <CardHeader>
         <CardTitle className="text-2xl font-semibold text-gray-900">
-          Detaillierte Übersicht der Regierungsperioden
+          Detaillierte Übersicht der {partyName}-Regierungsperioden
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
