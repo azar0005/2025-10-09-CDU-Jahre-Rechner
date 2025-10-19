@@ -101,3 +101,43 @@ export const calculateCDUYears = (birthYear) => {
     yearsAlive
   };
 };
+
+// Calculate years lived under Grünen government
+export const calculateGruenenYears = (birthYear) => {
+  // Current date is October 9, 2025
+  const currentYear = 2025;
+  
+  if (birthYear > currentYear) {
+    return { totalYears: 0, periods: [], percentage: 0, yearsAlive: 0 };
+  }
+  
+  const yearsAlive = currentYear - birthYear;
+  let totalYears = 0;
+  const relevantPeriods = [];
+  
+  gruenenPeriods.forEach(period => {
+    // Calculate overlap between user's life and Grünen period
+    const overlapStart = Math.max(birthYear, period.startYear);
+    const overlapEnd = Math.min(currentYear, period.endYear);
+    
+    if (overlapStart <= overlapEnd) {
+      const yearsInPeriod = overlapEnd - overlapStart + 1;
+      totalYears += yearsInPeriod;
+      relevantPeriods.push({
+        ...period,
+        yearsInPeriod,
+        overlapStart,
+        overlapEnd
+      });
+    }
+  });
+  
+  const percentage = yearsAlive > 0 ? Math.round((totalYears / yearsAlive) * 100) : 0;
+  
+  return {
+    totalYears,
+    periods: relevantPeriods,
+    percentage,
+    yearsAlive
+  };
+};
