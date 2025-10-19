@@ -3,13 +3,15 @@ import { Calculator, Calendar, TrendingUp } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { calculateCDUYears } from '../mockData';
+import { calculateCDUYears, calculateGruenenYears } from '../mockData';
 import Timeline from './Timeline';
 import ResultCard from './ResultCard';
+import GruenenReminder from './GruenenReminder';
 
 const CDUCalculator = () => {
   const [birthYear, setBirthYear] = useState('');
   const [result, setResult] = useState(null);
+  const [gruenenResult, setGruenenResult] = useState(null);
   const [error, setError] = useState('');
 
   const handleCalculate = () => {
