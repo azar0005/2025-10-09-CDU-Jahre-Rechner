@@ -29,7 +29,9 @@ const CDUCalculator = () => {
     
     setError('');
     const calculationResult = calculateCDUYears(year);
+    const gruenenCalculationResult = calculateGruenenYears(year);
     setResult(calculationResult);
+    setGruenenResult(gruenenCalculationResult);
   };
 
   const handleKeyPress = (e) => {
