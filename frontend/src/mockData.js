@@ -38,6 +38,30 @@ export const cduPeriods = [
   }
 ];
 
+// Mock Die Grünen (Green Party) government periods data
+export const gruenenPeriods = [
+  {
+    id: 1,
+    startYear: 1998,
+    endYear: 2005,
+    duration: 7,
+    chancellors: ['Gerhard Schröder (SPD, 1998-2005)'],
+    coalition: 'Red-Green Coalition (SPD-Grüne)',
+    description: 'First federal government participation, focus on renewable energy and environmental policy',
+    viceChancellor: 'Joschka Fischer (Vice Chancellor and Foreign Minister)'
+  },
+  {
+    id: 2,
+    startYear: 2021,
+    endYear: 2024,
+    duration: 3,
+    chancellors: ['Olaf Scholz (SPD, 2021-2024)'],
+    coalition: 'Ampel Coalition (SPD-Grüne-FDP)',
+    description: 'Second federal government participation, coalition collapsed in November 2024',
+    viceChancellor: 'Robert Habeck (Vice Chancellor and Minister for Economic Affairs and Climate Action)'
+  }
+];
+
 // Calculate years lived under CDU government
 export const calculateCDUYears = (birthYear) => {
   // Current date is October 9, 2025
