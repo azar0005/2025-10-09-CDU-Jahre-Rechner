@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { User, Users } from 'lucide-react';
 
-const Timeline = ({ periods, birthYear }) => {
+const Timeline = ({ periods, birthYear, partyName = "CDU" }) => {
   if (periods.length === 0) {
     return (
       <Card className="border-0 shadow-xl bg-white/80 backdrop-blur-sm">
